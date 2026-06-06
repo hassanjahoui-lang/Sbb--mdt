@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPad Pro M5 MDT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Container invisibile, appare solo quando chiamato -->
+    <div id="ui-container">
+        
+        <!-- Scocca dell'iPad Pro 11" -->
+        <div class="ipad-chassis">
+            <div class="camera-notch"></div>
+            
+            <!-- Schermo dell'iPad -->
+            <div class="ipad-screen">
+                
+                <!-- Status Bar (Ora, Wifi, Batteria) -->
+                <div class="status-bar">
+                    <span id="clock">09:41</span>
+                    <div class="status-icons">
+                        <span>📶</span> <span>🔋 100%</span>
+                    </div>
+                </div>
+
+                <!-- Homescreen / App Grid -->
+                <div class="homescreen">
+                    <div class="app-icon" onclick="openApp('police')">
+                        <div class="icon bg-blue">🚓</div>
+                        <span>LSPD MDT</span>
+                    </div>
+                    <div class="app-icon" onclick="openApp('ems')">
+                        <div class="icon bg-red">🚑</div>
+                        <span>EMS System</span>
+                    </div>
+                    <div class="app-icon" onclick="openApp('mechanic')">
+                        <div class="icon bg-orange">🔧</div>
+                        <span>Bennys</span>
+                    </div>
+                    <div class="app-icon" onclick="openApp('darkweb')">
+                        <div class="icon bg-black">🧅</div>
+                        <span>Tor Network</span>
+                    </div>
+                </div>
+
+                <!-- App Interface (Nascosta di default) -->
+                <div id="app-view" class="hidden">
+                    <button class="back-btn" onclick="closeApp()">⬅ Home</button>
+                    <h1 id="app-title">Applicazione</h1>
+                    <div id="app-content">
+                        <!-- Il contenuto dell'app viene caricato qui -->
+                    </div>
+                </div>
+
+                <!-- Barra Home in basso (Gestures) -->
+                <div class="home-indicator" onclick="closeMDT()"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
